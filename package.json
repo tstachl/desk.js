@@ -13,23 +13,25 @@
     "qs": "~0.6.5"
   },
   "devDependencies": {
-    "mocha": "~1.12.0",
-    "config": "~0.4.28",
-    "grunt": "~0.4.1",
-    "grunt-mocha-cov": "0.0.7",
-    "blanket": "~1.1.5",
-    "should": "~1.2.2",
+    "mocha": "1.9.x",
+    "should": "*",
+    "grunt": "0.4.x",
+    "grunt-cli": "~0.1.6",
     "grunt-env": "~0.4.0",
-    "replay": "~1.7.0",
-    "mocha-term-cov-reporter": "~0.1.4",
-    "grunt-cli": "~0.1.9"
+    "grunt-mocha-cov": "0.0.7",
+    "mocha-term-cov-reporter": "*",
+    "blanket": "1.1.x",
+    "lcov-parse": "0.0.x",
+    "replay": "~1.7.0"
   },
   "main": "index",
   "scripts": {
+    "test": "./node_modules/.bin/grunt test",
     "blanket": {
-      "pattern": "/desk/lib/"
-    },
-    "test": "grunt travis"
+      "pattern": [
+        "desk/lib"
+      ]
+    }
   },
   "license": "MIT"
 }
