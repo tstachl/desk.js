@@ -1,0 +1,33 @@
+{
+  "name": "desk",
+  "description": "A wrapper for the desk.com API.",
+  "version": "0.1.0",
+  "author": "Thomas Stachl <tom@desk.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tstachl/desk.js.git"
+  },
+  "dependencies": {
+    "request": "~2.25.0",
+    "async": "~0.2.9",
+    "qs": "~0.6.5"
+  },
+  "devDependencies": {
+    "mocha": "~1.12.0",
+    "config": "~0.4.28",
+    "grunt": "~0.4.1",
+    "grunt-mocha-cov": "0.0.7",
+    "blanket": "~1.1.5",
+    "should": "~1.2.2",
+    "grunt-env": "~0.4.0"
+  },
+  "main": "index",
+  "scripts": {
+    "blanket": {
+      "pattern": "/desk/lib/"
+    },
+    "test": "grunt travis",
+    "coveralls": "grunt coveralls"
+  },
+  "license": "MIT"
+}
