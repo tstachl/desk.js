@@ -1,0 +1,27 @@
+PATCH /api/v2/cases/3258
+host: devel.desk.com
+authorization: Basic dHN0YWNobEBzYWxlc2ZvcmNlLmNvbToyNTNlNjc0NQ==
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+cache-control: max-age=0, private, must-revalidate
+content-type: application/json; charset=utf-8
+date: Sat, 03 Aug 2013 05:42:21 GMT
+etag: "d48cc5825c5f8e287015d6040729ccb2"
+server: nginx
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 5.0
+x-frame-options: SAMEORIGIN
+x-rack-cache: invalidate, pass
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 56
+x-rate-limit-reset: 39
+x-request-id: bfd18f1658500c2ded6e9dad846747d9
+x-runtime: 0.187613
+x-ua-compatible: IE=Edge,chrome=1
+content-length: 958
+connection: keep-alive
+
+{"external_id":null,"subject":"New Subject","priority":5,"locked_until":null,"description":"Some Description","status":"new","type":"email","labels":["ignore","spam"],"language":"de","active_at":null,"created_at":"2013-08-03T05:42:19Z","updated_at":"2013-08-03T05:42:21Z","received_at":"2013-08-03T05:42:20Z","custom_fields":{"my_new_custom_field":null,"my_new_number_field":null,"my_new_date_field":null,"my_new_boolean_field":null,"my_new_list_field":null},"_links":{"self":{"href":"/api/v2/cases/3258","class":"case"},"message":{"href":"/api/v2/cases/3258/message","class":"email"},"customer":{"href":"/api/v2/customers/34290812","class":"customer"},"assigned_user":null,"assigned_group":{"href":"/api/v2/groups/171213","class":"group"},"locked_by":null,"replies":{"href":"/api/v2/cases/3258/replies","class":"reply"},"notes":{"href":"/api/v2/cases/3258/notes","class":"note"},"attachments":{"href":"/api/v2/cases/3258/attachments","class":"attachment"}}}

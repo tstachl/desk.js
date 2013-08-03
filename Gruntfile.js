@@ -2,6 +2,10 @@ module.exports = function(grunt) {
   grunt.initConfig({
     env: {
       test: {
+        NODE_ENV: 'test',
+        REPLAY: 'record'
+      },
+      travis: {
         NODE_ENV: 'test'
       }
     },
@@ -36,7 +40,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mocha-cov');
   grunt.loadNpmTasks('grunt-env');
 
-  grunt.registerTask('coveralls', ['env:test', 'mochacov:travis']);
-  grunt.registerTask('travis', ['env:test', 'mochacov:test']);
+  grunt.registerTask('coveralls', ['env:travis', 'mochacov:travis']);
+  grunt.registerTask('travis', ['env:travis', 'mochacov:test']);
   grunt.registerTask('test', ['env:test', 'mochacov:test', 'mochacov:coverage']);
 }

@@ -2,7 +2,10 @@
 var desk = require('../')
   , should = require('should')
   , config = require('config')
+  , replay = require('replay')
   , caseUrl;
+
+replay.fixtures = __dirname + '/fixtures'
 
 describe('Client', function() {
   it('throws an error if no subdomain is defined', function(done) {

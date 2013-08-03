@@ -1,0 +1,24 @@
+GET /api/v2/users?page=5&per_page=1
+host: devel.desk.com
+authorization: Basic dHN0YWNobEBzYWxlc2ZvcmNlLmNvbToyNTNlNjc0NQ==
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+accept-ranges: bytes
+cache-control: no-cache, private
+content-type: application/json; charset=utf-8
+date: Sat, 03 Aug 2013 05:42:26 GMT
+etag: "1375489157"
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 5.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 46
+x-rate-limit-reset: 34
+x-request-id: 1c4ac62ddd0dff9a572f0879d3e10d0d
+content-length: 637
+connection: keep-alive
+
+{"total_entries":5,"_links":{"self":{"href":"/api/v2/users?page=5&per_page=1","class":"page"},"first":{"href":"/api/v2/users?page=1&per_page=1","class":"page"},"last":{"href":"/api/v2/users?page=5&per_page=1","class":"page"},"previous":{"href":"/api/v2/users?page=4&per_page=1","class":"page"},"next":null},"_embedded":{"entries":[{"name":"Keith","public_name":"Keith","email":"keith@desk.com","level":"agent","_links":{"self":{"href":"/api/v2/users/17250751","class":"user"},"preferences":{"href":"/api/v2/users/17250751/preferences","class":"user_preference"},"searches":{"href":"/api/v2/users/17250751/searches","class":"search"}}}]}}

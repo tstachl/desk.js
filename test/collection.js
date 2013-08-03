@@ -1,7 +1,10 @@
 var desk = require('../')
   , should = require('should')
   , config = require('config')
+  , replay = require('replay')
   , util = require('util');
+
+replay.fixtures = __dirname + '/fixtures'
 
 function createClient() {
   return desk.createClient({

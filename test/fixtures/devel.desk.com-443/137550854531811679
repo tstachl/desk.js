@@ -1,0 +1,24 @@
+GET /api/v2/users?page=2&per_page=1
+host: devel.desk.com
+authorization: Basic dHN0YWNobEBzYWxlc2ZvcmNlLmNvbToyNTNlNjc0NQ==
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+accept-ranges: bytes
+cache-control: no-cache, private
+content-type: application/json; charset=utf-8
+date: Sat, 03 Aug 2013 05:42:25 GMT
+etag: "1375489157"
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 5.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 49
+x-rate-limit-reset: 35
+x-request-id: cabc18ae7732e8b8db11c09ef8161a29
+content-length: 694
+connection: keep-alive
+
+{"total_entries":5,"_links":{"self":{"href":"/api/v2/users?page=2&per_page=1","class":"page"},"first":{"href":"/api/v2/users?page=1&per_page=1","class":"page"},"last":{"href":"/api/v2/users?page=5&per_page=1","class":"page"},"previous":{"href":"/api/v2/users?page=1&per_page=1","class":"page"},"next":{"href":"/api/v2/users?page=3&per_page=1","class":"page"}},"_embedded":{"entries":[{"name":"Dan Stern","public_name":"Dan","email":"dan@desk.com","level":"siteadmin","_links":{"self":{"href":"/api/v2/users/16107036","class":"user"},"preferences":{"href":"/api/v2/users/16107036/preferences","class":"user_preference"},"searches":{"href":"/api/v2/users/16107036/searches","class":"search"}}}]}}
