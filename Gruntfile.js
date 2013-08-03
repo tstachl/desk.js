@@ -41,5 +41,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-env');
 
   grunt.registerTask('test', ['env:test', 'mochacov:unit', 'mochacov:coverage']);
-  grunt.registerTask('travis', ['env:travis', 'mochacov:unit', 'mochacov:coverage', 'mochacov:coveralls']);
+  grunt.registerTask('travis', ['mochacov:unit', 'mochacov:coverage']);
+  grunt.registerTask('coveralls', ['mochacov:coveralls'])
 }
