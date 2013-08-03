@@ -27,8 +27,7 @@
     "blanket": {
       "pattern": "/desk/lib/"
     },
-    "test": "grunt travis",
-    "coveralls": "grunt coveralls"
+    "test": "grunt travis"
   },
   "license": "MIT"
 }
