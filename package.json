@@ -20,6 +20,7 @@
     "grunt-env": "~0.4.0",
     "grunt-mocha-cov": "0.0.7",
     "mocha-term-cov-reporter": "*",
+    "mocha-lcov-reporter": "*",
     "blanket": "1.1.x",
     "lcov-parse": "0.0.x",
     "replay": "~1.7.0"
