@@ -20,7 +20,8 @@
     "blanket": "~1.1.5",
     "should": "~1.2.2",
     "grunt-env": "~0.4.0",
-    "replay": "~1.7.0"
+    "replay": "~1.7.0",
+    "mocha-term-cov-reporter": "~0.1.4"
   },
   "main": "index",
   "scripts": {

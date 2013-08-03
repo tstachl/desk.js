@@ -10,15 +10,15 @@ module.exports = function(grunt) {
       }
     },
     mochacov: {
-      test: {
+      unit: {
         options: {
           reporter: 'spec'
         }
       },
       coverage: {
         options: {
-          reporter: 'html-cov',
-          output: 'coverage.html'
+          reporter: 'mocha-term-cov-reporter',
+          coverage: true
         }
       },
       coveralls: {
@@ -29,10 +29,10 @@ module.exports = function(grunt) {
         }
       },
       options: {
-        files: ['test/*.js'],
+        files: 'test/*.js',
         timeout: 5000,
-        recursive: true,
-        growl: true
+        ui: 'bdd',
+        colors: true
       }
     }
   });
@@ -40,7 +40,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mocha-cov');
   grunt.loadNpmTasks('grunt-env');
 
-  grunt.registerTask('travis', ['env:travis', 'mochacov:test']);
-  grunt.registerTask('coveralls', ['mochacov:coveralls']);
-  grunt.registerTask('test', ['env:test', 'mochacov:test', 'mochacov:coverage']);
+  grunt.registerTask('test', ['env:test', 'mochacov:unit', 'mochacov:coverage']);
+  grunt.registerTask('travis', ['env:travis', 'mochacov:unit', 'mochacov:coverage', 'mochacov:coveralls']);
 }
