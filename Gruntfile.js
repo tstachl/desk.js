@@ -21,7 +21,7 @@ module.exports = function(grunt) {
           output: 'coverage.html'
         }
       },
-      travis: {
+      coveralls: {
         options: {
           coveralls: {
             serviceName: 'travis-ci'
@@ -40,7 +40,6 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-mocha-cov');
   grunt.loadNpmTasks('grunt-env');
 
-  grunt.registerTask('coveralls', ['env:travis', 'mochacov:travis']);
-  grunt.registerTask('travis', ['env:travis', 'mochacov:test']);
+  grunt.registerTask('travis', ['env:travis', 'mochacov:test', 'mochacov:coveralls']);
   grunt.registerTask('test', ['env:test', 'mochacov:test', 'mochacov:coverage']);
 }
