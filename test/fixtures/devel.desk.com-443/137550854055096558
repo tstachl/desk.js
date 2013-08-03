@@ -1,6 +1,5 @@
 POST /api/v2/cases
 host: devel.desk.com
-authorization: Basic dHN0YWNobEBzYWxlc2ZvcmNlLmNvbToyNTNlNjc0NQ==
 accept: application/json
 content-type: application/json
 

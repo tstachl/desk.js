@@ -1,6 +1,5 @@
 PATCH /api/v2/cases/3258
 host: devel.desk.com
-authorization: Basic dHN0YWNobEBzYWxlc2ZvcmNlLmNvbToyNTNlNjc0NQ==
 accept: application/json
 content-type: application/json
 

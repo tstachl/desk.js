@@ -1,14 +1,23 @@
 var desk = require('../')
   , should = require('should')
-  , config = require('config')
   , replay = require('replay')
   , util = require('util');
 
-replay.fixtures = __dirname + '/fixtures'
+replay.fixtures = __dirname + '/fixtures';
+
+try {
+  config = require('../config/test');
+} catch (err) {
+  config = {
+    subdomain: 'devel',
+    username: 'devel@example.com',
+    password: '12345'
+  }
+}
 
 function createClient() {
   return desk.createClient({
-    subdomain: config.subdomain,
+    subdomain: config.subdomain ,
     username: config.username,
     password: config.password
   })

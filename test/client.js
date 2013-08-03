@@ -1,11 +1,20 @@
 
 var desk = require('../')
   , should = require('should')
-  , config = require('config')
   , replay = require('replay')
   , caseUrl;
 
-replay.fixtures = __dirname + '/fixtures'
+replay.fixtures = __dirname + '/fixtures';
+
+try {
+  config = require('../config/test');
+} catch (err) {
+  config = {
+    subdomain: 'devel',
+    username: 'devel@example.com',
+    password: '12345'
+  }
+}
 
 describe('Client', function() {
   it('throws an error if no subdomain is defined', function(done) {

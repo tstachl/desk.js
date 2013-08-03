@@ -1,6 +1,5 @@
 GET /api/v2/users?per_page=50&page=1
 host: devel.desk.com
-authorization: Basic dHN0YWNobEBzYWxlc2ZvcmNlLmNvbToyNTNlNjc0NQ==
 accept: application/json
 content-type: application/json
 
