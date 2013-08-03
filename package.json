@@ -21,7 +21,8 @@
     "should": "~1.2.2",
     "grunt-env": "~0.4.0",
     "replay": "~1.7.0",
-    "mocha-term-cov-reporter": "~0.1.4"
+    "mocha-term-cov-reporter": "~0.1.4",
+    "grunt-cli": "~0.1.9"
   },
   "main": "index",
   "scripts": {
