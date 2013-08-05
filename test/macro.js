@@ -60,7 +60,7 @@ describe('Macro', function() {
     it('deletes a macro', function(done) {
       var client = createClient();
       client.macros().byUrl(macroHref, function(err, macro) {
-        macro.delete(function(err) {
+        macro.destroy(function(err) {
           should.not.exist(err);
           done();
         });

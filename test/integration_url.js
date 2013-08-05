@@ -61,7 +61,7 @@ describe('IntegrationUrl', function() {
     it('deletes an integration url', function(done) {
       var client = createClient();
       client.integrationUrls().byUrl(integrationUrlHref, function(err, integrationUrl) {
-        integrationUrl.delete(function(err) {
+        integrationUrl.destroy(function(err) {
           should.not.exist(err);
           done();
         });

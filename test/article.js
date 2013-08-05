@@ -66,7 +66,7 @@ describe('Article', function() {
     it('deletes an article', function(done) {
       var client = createClient();
       client.articles().byUrl(articleHref, function(err, article) {
-        article.delete(function(err) {
+        article.destroy(function(err) {
           should.not.exist(err);
           done();
         });

@@ -51,7 +51,7 @@ describe('Attachment', function() {
       var client = createClient();
       client.cases(function(err, cases) {
         cases[0].attachments(function(err, attachments) {
-          attachments[0].delete(function(err) {
+          attachments[0].destroy(function(err) {
             should.not.exist(err);
             done();
           })

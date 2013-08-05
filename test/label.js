@@ -61,7 +61,7 @@ describe('Label', function() {
     it('deletes a label', function(done) {
       var client = createClient();
       client.labels().byUrl(labelHref, function(err, label) {
-        label.delete(function(err) {
+        label.destroy(function(err) {
           should.not.exist(err);
           done();
         });
