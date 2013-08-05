@@ -1,0 +1,23 @@
+GET /api/v2/cases/3323
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+accept-ranges: bytes
+cache-control: must-revalidate, private, max-age=0
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 04:12:00 GMT
+etag: "f172427dfbf27312b133179d55211555"
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 59
+x-rate-limit-reset: 60
+x-request-id: 8da3b8dd2953bbb9f70dbb42b93aadd3
+content-length: 958
+connection: keep-alive
+
+{"external_id":null,"subject":"Some Subject","priority":5,"locked_until":null,"description":"Some Description","status":"new","type":"email","labels":["ignore","spam"],"language":"de","active_at":null,"created_at":"2013-08-04T23:24:25Z","updated_at":"2013-08-04T23:24:26Z","received_at":"2013-08-04T23:24:25Z","custom_fields":{"my_new_custom_field":null,"my_new_number_field":null,"my_new_date_field":null,"my_new_boolean_field":null,"my_new_list_field":null},"_links":{"self":{"href":"/api/v2/cases/3323","class":"case"},"message":{"href":"/api/v2/cases/3323/message","class":"email"},"customer":{"href":"/api/v2/customers/34290812","class":"customer"},"assigned_user":null,"assigned_group":{"href":"/api/v2/groups/171213","class":"group"},"locked_by":null,"replies":{"href":"/api/v2/cases/3323/replies","class":"reply"},"notes":{"href":"/api/v2/cases/3323/notes","class":"note"},"attachments":{"href":"/api/v2/cases/3323/attachments","class":"attachment"}}}

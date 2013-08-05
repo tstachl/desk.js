@@ -1,0 +1,22 @@
+GET /api/v2/users/search?text=asdf
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+404 HTTP/1.1
+accept-ranges: bytes
+cache-control: no-cache, private
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 01:10:24 GMT
+status: 404 Not Found
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 58
+x-rate-limit-reset: 36
+x-request-id: 2f0ac174a26c775ae0b8f4f5365b02f0
+content-length: 32
+connection: keep-alive
+
+{"message":"Resource Not Found"}

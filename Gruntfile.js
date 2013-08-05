@@ -3,44 +3,42 @@ module.exports = function(grunt) {
     env: {
       test: {
         NODE_ENV: 'test',
-        REPLAY: 'record'
+        REPLAY: 'record',
+        DEBUG: 'true'
       },
       travis: {
-        NODE_ENV: 'test'
+        NODE_ENV: 'test',
+        REPLAY: 'replay',
+        YOURPACKAGE_COVERAGE: '1'
       }
     },
-    mochacov: {
-      unit: {
+    mochaTest: {
+      test: {
         options: {
-          reporter: 'spec'
-        }
+          reporter: 'spec',
+          require: 'blanket'
+        },
+        src: ['test/*.js']
       },
       coverage: {
         options: {
-          reporter: 'mocha-term-cov-reporter',
-          coverage: true
-        }
-      },
-      coveralls: {
-        options: {
-          coveralls: {
-            serviceName: 'travis-ci'
-          }
-        }
-      },
-      options: {
-        files: 'test/*.js',
-        timeout: 5000,
-        ui: 'bdd',
-        colors: true
+          reporter: 'html-cov',
+          quiet: true,
+          captureFile: 'coverage.html'
+        },
+        src: ['test/*.js']
       }
     }
   });
 
-  grunt.loadNpmTasks('grunt-mocha-cov');
   grunt.loadNpmTasks('grunt-env');
+  grunt.loadNpmTasks('grunt-mocha-test');
 
-  grunt.registerTask('test', ['env:test', 'mochacov:unit', 'mochacov:coverage']);
+  grunt.registerTask('test', ['env:test', 'mochaTest']);
   grunt.registerTask('travis', ['mochacov:unit', 'mochacov:coverage']);
-  grunt.registerTask('coveralls', ['mochacov:coveralls'])
+  grunt.registerTask('coveralls', ['mochacov:coverage', 'mochacov:coveralls']);
+
+  grunt.registerTask('cleanfixtures', '', function() {
+    grunt.log.writeln('Currently running the "default" task.');
+  });
 }

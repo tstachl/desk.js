@@ -1,25 +1,22 @@
-GET /api/v2/users?per_page=50&page=1
+GET /api/v2/users
 host: devel.desk.com
 accept: application/json
 content-type: application/json
 
 200 HTTP/1.1
+accept-ranges: bytes
 cache-control: no-cache, private
 content-type: application/json; charset=utf-8
-date: Sat, 03 Aug 2013 05:42:21 GMT
-etag: "1375489157"
-server: nginx
+date: Sun, 04 Aug 2013 23:24:29 GMT
+etag: "1375650223"
 status: 200 OK
 vary: X-AppVersion
-x-appversion: 5.0
+x-appversion: 6.0
 x-frame-options: SAMEORIGIN
-x-rack-cache: miss
 x-rate-limit-limit: 60
-x-rate-limit-remaining: 55
-x-rate-limit-reset: 39
-x-request-id: 17e1eeed7c627df565d6eeb88b1688e8
-x-runtime: 0.053113
-x-ua-compatible: IE=Edge,chrome=1
+x-rate-limit-remaining: 23
+x-rate-limit-reset: 31
+x-request-id: 2e7b48a4e68a03bd934b38eba9649a34
 content-length: 1868
 connection: keep-alive
 

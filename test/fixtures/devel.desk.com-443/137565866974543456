@@ -1,0 +1,23 @@
+GET /api/v2/system_message
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+accept-ranges: bytes
+cache-control: no-cache, private
+content-type: application/json; charset=utf-8
+date: Sun, 04 Aug 2013 23:14:26 GMT
+etag: "1375650223"
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 41
+x-rate-limit-reset: 34
+x-request-id: 1fcb33c952fc6a712adeb557169bdb9a
+content-length: 137
+connection: keep-alive
+
+{"message":"We're not doing maintenance today, but if we were then we would tell you about it here.","updated_at":"2013-07-31T20:39:34Z"}

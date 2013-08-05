@@ -1,4 +1,4 @@
-GET /api/v2/users?per_page=1&page=1
+GET /api/v2/users?page=1&per_page=1
 host: devel.desk.com
 accept: application/json
 content-type: application/json
@@ -7,16 +7,16 @@ content-type: application/json
 accept-ranges: bytes
 cache-control: no-cache, private
 content-type: application/json; charset=utf-8
-date: Sat, 03 Aug 2013 05:42:26 GMT
-etag: "1375489157"
+date: Sun, 04 Aug 2013 23:24:28 GMT
+etag: "1375650223"
 status: 200 OK
 vary: X-AppVersion
-x-appversion: 5.0
+x-appversion: 6.0
 x-frame-options: SAMEORIGIN
 x-rate-limit-limit: 60
-x-rate-limit-remaining: 47
-x-rate-limit-reset: 34
-x-request-id: b37b1643ac8dfa289bb26c3d3da6f74b
+x-rate-limit-remaining: 28
+x-rate-limit-reset: 32
+x-request-id: 3fabb7a6a223dff2f3a43e7e034009f3
 content-length: 673
 connection: keep-alive
 

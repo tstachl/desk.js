@@ -1,0 +1,23 @@
+GET /api/v2/users/16096734/preferences
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+accept-ranges: bytes
+cache-control: must-revalidate, private, max-age=0
+content-type: application/json; charset=utf-8
+date: Sun, 04 Aug 2013 23:24:29 GMT
+etag: "e3ffc475dad8fb9215fb40107e0ddc40"
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 24
+x-rate-limit-reset: 31
+x-request-id: f4cb24b2f76f3f5aac8cd03dda908912
+content-length: 3371
+connection: keep-alive
+
+{"total_entries":15,"_links":{"self":{"href":"/api/v2/users/16096734/preferences?page=1&per_page=50","class":"page"},"first":{"href":"/api/v2/users/16096734/preferences?page=1&per_page=50","class":"page"},"last":{"href":"/api/v2/users/16096734/preferences?page=1&per_page=50","class":"page"},"previous":null,"next":null},"_embedded":{"entries":[{"name":"enable_routing_filter_on_login","value":"0","_links":{"self":{"href":"/api/v2/users/16096734/preferences/1406191","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"scroll_to_bottom_on_open","value":"1","_links":{"self":{"href":"/api/v2/users/16096734/preferences/835947","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"auto_accept_on_route","value":false,"_links":{"self":{"href":"/api/v2/users/16096734/preferences/836441","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"case_filter_view","value":"200","_links":{"self":{"href":"/api/v2/users/16096734/preferences/835937","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"warn_before_exit","value":false,"_links":{"self":{"href":"/api/v2/users/16096734/preferences/835944","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"screenpop_sound","value":"80","_links":{"self":{"href":"/api/v2/users/16096734/preferences/835940","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"screenpop_sound_repeat_enabled","value":false,"_links":{"self":{"href":"/api/v2/users/16096734/preferences/836443","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"inactivity_sound","value":"10","_links":{"self":{"href":"/api/v2/users/16096734/preferences/835939","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"inactivity_sound_repeat_enabled","value":false,"_links":{"self":{"href":"/api/v2/users/16096734/preferences/835941","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"new_chat_message_sound","value":"70","_links":{"self":{"href":"/api/v2/users/16096734/preferences/835945","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"confirm_on_short_replies","value":true,"_links":{"self":{"href":"/api/v2/users/16096734/preferences/835943","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"case_default_view","value":"-1","_links":{"self":{"href":"/api/v2/users/16096734/preferences/835946","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"show_labels_in_case_filter_view","value":true,"_links":{"self":{"href":"/api/v2/users/16096734/preferences/835942","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"bulk_case_filter_manage_confirm","value":true,"_links":{"self":{"href":"/api/v2/users/16096734/preferences/836442","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}},{"name":"knows_about_inline_macros","value":false,"_links":{"self":{"href":"/api/v2/users/16096734/preferences/1952629","class":"user_preference"},"user":{"href":"/api/v2/users/16096734","class":"user"}}}]}}
