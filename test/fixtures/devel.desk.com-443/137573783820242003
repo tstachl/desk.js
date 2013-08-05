@@ -1,0 +1,24 @@
+POST /api/v2/labels
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+201 HTTP/1.1
+accept-ranges: bytes
+cache-control: max-age=0, private, must-revalidate
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 21:23:58 GMT
+etag: "11a5565060585756b949785ecf4b7ce3"
+location: https://devel.desk.com/api/v2/labels/1434198
+status: 201 Created
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 59
+x-rate-limit-reset: 2
+x-request-id: b7576c38abf28a6f56c24021b706b84b
+content-length: 147
+connection: keep-alive
+
+{"name":"MyLabel","description":"A Test Label","enabled":true,"types":["case"],"_links":{"self":{"href":"/api/v2/labels/1434198","class":"label"}}}

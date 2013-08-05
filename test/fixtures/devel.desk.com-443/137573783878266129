@@ -1,0 +1,19 @@
+DELETE /api/v2/labels/1434198
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+204 HTTP/1.1
+accept-ranges: bytes
+cache-control: no-cache
+date: Mon, 05 Aug 2013 21:23:58 GMT
+status: 204 No Content
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 55
+x-rate-limit-reset: 2
+x-request-id: 2cd378435c7c7e54e215661281a9fc58
+connection: keep-alive
+

@@ -1,0 +1,24 @@
+POST /api/v2/cases/3011/replies
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+201 HTTP/1.1
+accept-ranges: bytes
+cache-control: max-age=0, private, must-revalidate
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 18:23:23 GMT
+etag: "9a2dddeb6e4189bb2d1f44c7651bbd3f"
+location: https://devel.desk.com/api/v2/cases/3011/replies/241829211
+status: 201 Created
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 59
+x-rate-limit-reset: 37
+x-request-id: 38ffa471021f3ffd454eb5c68408677b
+content-length: 446
+connection: keep-alive
+
+{"body":"some text for this reply","direction":"out","created_at":"2013-08-05T18:23:23Z","updated_at":"2013-08-05T18:23:23Z","entered_at":"2013-08-05T18:23:23Z","status":"sent","_links":{"self":{"href":"/api/v2/cases/3011/replies/241829211","class":"phone_call"},"case":{"href":"/api/v2/cases/3011","class":"case"},"customer":{"href":"/api/v2/customers/37823480","class":"customer"},"entered_by":{"href":"/api/v2/users/16096734","class":"user"}}}

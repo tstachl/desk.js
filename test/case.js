@@ -26,7 +26,41 @@ function createClient() {
   })
 }
 
-describe('Case', function() {
+describe('Case create', function() {
+  it('creates a case from cases resource', function(done) {
+    var client = createClient();
+    client.cases().create({
+      external_id: null,
+      subject: 'Some Subject',
+      priority: 5,
+      description: 'Some Description',
+      status: 'new',
+      type: 'email',
+      labels: ['ignore', 'spam'],
+      language: null,
+      custom_fields: {},
+      message: {
+        direction: 'in',
+        status: 'received',
+        body: 'Some Body',
+        subject: 'Some Subject',
+        from: 'support@desk.com',
+        to: 'support@devel.com'
+      },
+      _links: {
+        customer: {
+          href: '/api/v2/customers/34290812',
+          'class': 'customer'
+        }
+      }
+    }, function(err, kase) {
+      kase.getSubject().should.equal('Some Subject');
+      done();
+    })
+  })
+})
+
+describe('Case update', function() {
   beforeEach(function(done){
     var client = createClient()
       , params = {
@@ -80,5 +114,18 @@ describe('Case', function() {
         done();
       });
     });
+  })
+})
+
+describe('Case Message', function() {
+  it('shows the case message', function(done) {
+    var client = createClient();
+    client.cases().perPage(1).exec(function(err, cases) {
+      cases[0].message(function(err, message) {
+        message.getDirection().should.equal('in');
+        message.getCreatedAt().should.equal('2013-05-09T17:02:16Z');
+        done();
+      })
+    })
   })
 })

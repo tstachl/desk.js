@@ -1,0 +1,24 @@
+POST /api/v2/companies
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+201 HTTP/1.1
+accept-ranges: bytes
+cache-control: max-age=0, private, must-revalidate
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 20:20:04 GMT
+etag: "0642f7c22a1902f95f624aefd1f7d30e"
+location: https://devel.desk.com/api/v2/companies/7362663
+status: 201 Created
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 59
+x-rate-limit-reset: 56
+x-request-id: bb7d2b1710c3d141e62d84ecec40c261
+content-length: 283
+connection: keep-alive
+
+{"name":"Some Company Inc.","domains":[],"created_at":"2013-08-05T20:20:04Z","updated_at":"2013-08-05T20:20:04Z","custom_fields":{},"_links":{"self":{"href":"/api/v2/companies/7362663","class":"company"},"customers":{"href":"/api/v2/companies/7362663/customers","class":"customer"}}}

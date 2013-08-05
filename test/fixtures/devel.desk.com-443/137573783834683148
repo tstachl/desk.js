@@ -1,0 +1,23 @@
+GET /api/v2/labels/1434198
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+accept-ranges: bytes
+cache-control: must-revalidate, private, max-age=0
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 21:23:58 GMT
+etag: "11a5565060585756b949785ecf4b7ce3"
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 58
+x-rate-limit-reset: 2
+x-request-id: f004e73abd1a3f13be98346111fc4f7b
+content-length: 147
+connection: keep-alive
+
+{"name":"MyLabel","description":"A Test Label","enabled":true,"types":["case"],"_links":{"self":{"href":"/api/v2/labels/1434198","class":"label"}}}

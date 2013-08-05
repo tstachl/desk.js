@@ -1,0 +1,24 @@
+POST /api/v2/articles
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+201 HTTP/1.1
+accept-ranges: bytes
+cache-control: max-age=0, private, must-revalidate
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 20:50:52 GMT
+etag: "dd0d6f8d99de2be702f22708e3bf510a"
+location: https://devel.desk.com/api/v2/articles/1251824
+status: 201 Created
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 59
+x-rate-limit-reset: 8
+x-request-id: 29bf693fe7b4d344e1d288d54b3dd59c
+content-length: 805
+connection: keep-alive
+
+{"subject":"Some Subject","body":"Some Body","body_email":"Some Body","body_email_auto":true,"body_chat":"Some Body","body_chat_auto":true,"body_web_callback":"Some Body","body_web_callback_auto":true,"body_twitter":"Some Body","body_twitter_auto":true,"body_qna":"Some Body","body_qna_auto":true,"body_phone":"Some Body","body_phone_auto":true,"body_facebook":"Some Body","body_facebook_auto":true,"keywords":null,"position":2,"quickcode":null,"in_support_center":null,"internal_notes":null,"publish_at":null,"created_at":"2013-08-05T20:50:52Z","updated_at":"2013-08-05T20:50:52Z","_links":{"self":{"href":"/api/v2/articles/1251824","class":"article"},"topic":{"href":"/api/v2/topics/498301","class":"topic"},"translations":{"href":"/api/v2/articles/1251824/translations","class":"article_translation"}}}

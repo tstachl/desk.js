@@ -1,0 +1,23 @@
+GET /api/v2/cases/3011/message
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+accept-ranges: bytes
+cache-control: must-revalidate, private, max-age=0
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 18:08:06 GMT
+etag: "eb5abab2f0f181ab4857ef9c8524c48d"
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 59
+x-rate-limit-reset: 54
+x-request-id: 682004418a22e78022cc6c9cd6950523
+content-length: 332
+connection: keep-alive
+
+{"body":"","direction":"in","created_at":"2013-05-09T17:02:16Z","updated_at":"2013-05-09T17:02:16Z","entered_at":null,"status":"draft","_links":{"self":{"href":"/api/v2/cases/3011/message","class":"phone_call"},"case":{"href":"/api/v2/cases/3011","class":"case"},"customer":{"href":"/api/v2/customers/37823480","class":"customer"}}}

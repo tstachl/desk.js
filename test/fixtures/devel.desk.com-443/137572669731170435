@@ -1,0 +1,23 @@
+GET /api/v2/cases/3011/replies
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+accept-ranges: bytes
+cache-control: must-revalidate, private, max-age=0
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 18:18:17 GMT
+etag: "07938dd8b441fe82faf0b774178e88c0"
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 58
+x-rate-limit-reset: 43
+x-request-id: 68fb292ceeba746bdca944e4764828db
+content-length: 323
+connection: keep-alive
+
+{"total_entries":0,"_links":{"self":{"href":"/api/v2/cases/3011/replies?page=1&per_page=50","class":"page"},"first":{"href":"/api/v2/cases/3011/replies?page=1&per_page=50","class":"page"},"last":{"href":"/api/v2/cases/3011/replies?page=1&per_page=50","class":"page"},"previous":null,"next":null},"_embedded":{"entries":[]}}

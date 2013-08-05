@@ -1,0 +1,23 @@
+GET /api/v2/integration_urls/284794
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+accept-ranges: bytes
+cache-control: must-revalidate, private, max-age=0
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 21:08:39 GMT
+etag: "2bcd1b7611faf0f687fe71a2092433e4"
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 58
+x-rate-limit-reset: 21
+x-request-id: 3b5eea39b34eac819337b07aac18b597
+content-length: 332
+connection: keep-alive
+
+{"name":"Sample URL","description":"A sample Integration URL","enabled":false,"markup":"http://www.example.com","rendered":"http://www.example.com","created_at":"2013-08-05T21:08:39Z","updated_at":"2013-08-05T21:08:39Z","_links":{"self":{"href":"/api/v2/integration_urls/284794","class":"integration_url"},"group":null,"user":null}}

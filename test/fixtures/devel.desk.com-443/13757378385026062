@@ -1,0 +1,26 @@
+PATCH /api/v2/labels/1434198
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+cache-control: max-age=0, private, must-revalidate
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 21:23:58 GMT
+etag: "ff1b8a20b29318c92b7a7213a0bcf110"
+server: nginx
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rack-cache: invalidate, pass
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 57
+x-rate-limit-reset: 2
+x-request-id: 4cef560f50d81a557c6b9dbf0ce91308
+x-runtime: 0.104083
+x-ua-compatible: IE=Edge,chrome=1
+content-length: 150
+connection: keep-alive
+
+{"name":"MyNewLabel","description":"A Test Label","enabled":true,"types":["case"],"_links":{"self":{"href":"/api/v2/labels/1434198","class":"label"}}}

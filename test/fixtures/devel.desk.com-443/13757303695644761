@@ -1,0 +1,23 @@
+GET /api/v2/cases/3011/attachments
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+accept-ranges: bytes
+cache-control: must-revalidate, private, max-age=0
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 19:19:29 GMT
+etag: "3f045ea0d0765d56a5483844e5d5ce80"
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 59
+x-rate-limit-reset: 31
+x-request-id: 5c75b0d021badc334d2ccd97370d4948
+content-length: 1005
+connection: keep-alive
+
+{"total_entries":1,"_links":{"self":{"href":"/api/v2/cases/3011/attachments?page=1&per_page=50","class":"page"},"first":{"href":"/api/v2/cases/3011/attachments?page=1&per_page=50","class":"page"},"last":{"href":"/api/v2/cases/3011/attachments?page=1&per_page=50","class":"page"},"previous":null,"next":null},"_embedded":{"entries":[{"file_name":"GlasKunst.jpg","content_type":"image/jpeg","size":"128085","url":"https://assistly-production.s3.amazonaws.com/devel/ticket_attachments/31775165/GlasKunst_original.jpg?AWSAccessKeyId=AKIAJNSFWOZ6ZS23BMKQ&Expires=1375730489&Signature=%2FHT0qOIArKaFfOoLUO6PuWnsR9I%3D&response-content-disposition=filename%3D%22GlasKunst.jpg%22&response-content-type=image%2Fjpeg","erased_at":null,"created_at":"2013-08-05T19:17:12Z","updated_at":"2013-08-05T19:17:12Z","_links":{"self":{"href":"/api/v2/cases/3011/attachments/31775165","class":"attachment"},"case":{"href":"/api/v2/cases/3011","class":"case"},"uploaded_by":{"href":"/api/v2/users/16096734","class":"user"}}}]}}

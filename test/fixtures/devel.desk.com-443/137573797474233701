@@ -1,0 +1,23 @@
+GET /api/v2/macros/946949
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+accept-ranges: bytes
+cache-control: must-revalidate, private, max-age=0
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 21:26:14 GMT
+etag: "4760b3f32302e916ceeee0e1cb204ff3"
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 56
+x-rate-limit-reset: 46
+x-request-id: 396bd47d0f2814f9cc8763e57f5c91af
+content-length: 262
+connection: keep-alive
+
+{"name":"Assign to Engineering and Support","description":"It's raining fire!","enabled":false,"position":6,"folders":[],"_links":{"self":{"href":"/api/v2/macros/946949","class":"macro"},"actions":{"href":"/api/v2/macros/946949/actions","class":"macro_action"}}}

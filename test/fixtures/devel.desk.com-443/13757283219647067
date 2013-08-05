@@ -1,0 +1,26 @@
+PATCH /api/v2/cases/3012/replies/241843695
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+cache-control: max-age=0, private, must-revalidate
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 18:45:21 GMT
+etag: "ee91f37b7ae41b98b7a84049de607c68"
+server: nginx
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rack-cache: invalidate, pass
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 58
+x-rate-limit-reset: 39
+x-request-id: a9ff76aad04bb7d9ea2ca555c4baffe3
+x-runtime: 0.105320
+x-ua-compatible: IE=Edge,chrome=1
+content-length: 520
+connection: keep-alive
+
+{"subject":"Re: ","body":"some other text for this reply","from":"\"Product Support\" <support@stachl.me>","to":"thomas@stachl.me","cc":null,"bcc":null,"direction":"out","status":"draft","created_at":"2013-08-05T18:45:21Z","updated_at":"2013-08-05T18:45:21Z","_links":{"self":{"href":"/api/v2/cases/3012/replies/241843695","class":"email"},"case":{"href":"/api/v2/cases/3012","class":"case"},"customer":{"href":"/api/v2/customers/37823480","class":"customer"},"sent_by":{"href":"/api/v2/users/16096734","class":"user"}}}

@@ -1,0 +1,24 @@
+POST /api/v2/cases/3011/attachments
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+201 HTTP/1.1
+accept-ranges: bytes
+cache-control: max-age=0, private, must-revalidate
+content-type: application/json; charset=utf-8
+date: Mon, 05 Aug 2013 19:17:12 GMT
+etag: "df4aeb228982b34b7d4858133512a315"
+location: https://devel.desk.com/api/v2/cases/3011/attachments/31775165
+status: 201 Created
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 59
+x-rate-limit-reset: 49
+x-request-id: 1f23087c12c2b06b74dce867608b594d
+content-length: 668
+connection: keep-alive
+
+{"file_name":"GlasKunst.jpg","content_type":"image/jpeg","size":"128085","url":"https://assistly-production.s3.amazonaws.com/devel/ticket_attachments/31775165/GlasKunst_original.jpg?AWSAccessKeyId=AKIAJNSFWOZ6ZS23BMKQ&Expires=1375730352&Signature=aYKQao3ZxllSnkuRR8qPPxnY7vE%3D&response-content-disposition=filename%3D%22GlasKunst.jpg%22&response-content-type=image%2Fjpeg","erased_at":null,"created_at":"2013-08-05T19:17:12Z","updated_at":"2013-08-05T19:17:12Z","_links":{"self":{"href":"/api/v2/cases/3011/attachments/31775165","class":"attachment"},"case":{"href":"/api/v2/cases/3011","class":"case"},"uploaded_by":{"href":"/api/v2/users/16096734","class":"user"}}}

@@ -204,4 +204,26 @@ describe('Resource', function() {
       done();
     });
   })
+
+  it('can not create a resource that does not support create', function(done) {
+    var client = createClient();
+    client.users(function(err, users) {
+      users.create({ name: 'Test', role: 'something' }, function(err, user) {
+        err.message.should.equal('User doesn\'t support creating new resources.');
+        should.not.exist(user);
+        done();
+      })
+    })
+  })
+
+  it('can not update a resource that does not support update', function(done) {
+    var client = createClient();
+    client.cases(function(err, cases) {
+      // cases[0] is a phone call
+      cases[0].notes(function(err, notes) {
+        should.not.exist(notes[0].update);
+        done();
+      });
+    });
+  })
 })

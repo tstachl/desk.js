@@ -1,0 +1,19 @@
+DELETE /api/v2/articles/1251824
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+204 HTTP/1.1
+accept-ranges: bytes
+cache-control: no-cache
+date: Mon, 05 Aug 2013 20:50:53 GMT
+status: 204 No Content
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 55
+x-rate-limit-reset: 7
+x-request-id: 5066abbb1b985ef70d3a87dcc886a250
+connection: keep-alive
+
