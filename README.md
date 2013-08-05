@@ -1,6 +1,6 @@
 # desk.js [![Build Status](https://secure.travis-ci.org/tstachl/desk.js.png)](http://travis-ci.org/tstachl/desk.js) [![Coverage Status](https://coveralls.io/repos/tstachl/desk.js/badge.png)](https://coveralls.io/r/tstachl/desk.js)
 
-This is a node.js wrapper for the desk.com API. It'll only support APIv2 which is currently in heavy development, changes happen nearly twice to three times a week. For this wrapper we'll try to keep up with all the changes but things might break unexpectedly.
+This is a node.js wrapper for the desk.com API (it might also work in the browser but only with either a proxy or from a desk.com case template). It'll only support APIv2 which is currently in heavy development, changes happen nearly twice to three times a week. We'll try to keep up with all the changes but things might break unexpectedly.
 
 Now for the fun part ...
 
@@ -51,6 +51,22 @@ client.delete('/api/v2/articles/1', function(err, response) {
 
 This wrapper also allows you to work with collections and resources, follow associations and more ...
 
+### Finders
+```javascript
+// find a resource by url
+client.cases().byUrl('/api/v2/cases/1', function(err, myCase) {
+  if (err) throw err;
+  // use myCase
+});
+
+// find a resource by id
+client.cases().byId(1, function(err, myCase) {
+  if (err) throw err;
+  // use myCase
+});
+```
+
+### Pagination
 ```javascript
 // fetch the first page of the users collection
 client.users(function(err, users) {
@@ -75,7 +91,149 @@ client.users().perPage(10).page(5).exec(function(err, users) {
 });
 ```
 
-This is by no means complete and still a work in progress.
+Pagination is pretty obvious but the cool part about pagination or rather resources is the auto-linking. As soon as the resource has a link defined, it'll be navigatable:
+
+```json
+{
+  "_links": {
+    "self": {
+      "href": "/api/v2/cases/1",
+      "class": "case"
+    },
+    "message": {
+      "href": "/api/v2/cases/1/message",
+      "class": "message"
+    },
+    "customer": {
+      "href": "/api/v2/customers/1",
+      "class": "customer"
+    },
+    "assigned_user": {
+      "href": "/api/v2/users/2",
+      "class": "user"
+    },
+    "assigned_group": {
+      "href": "/api/v2/groups/1",
+      "class": "group"
+    },
+    "locked_by": null
+  }
+}
+```
+
+```javascript
+client.cases(function(err, cases) {
+  cases[0].customer(function(err, customer) {
+    // now you can use the customer
+    // you could do an update
+    customer.update({ first_name: 'John', last_name: 'Doe' }, function(err, customer) {
+      console.log(customer.getFirstName());
+      // => John
+    });
+  });
+});
+```
+
+### Create, Update and Delete
+`desk.js` supports create, update and delete methods on resources. However if the API doesn't allow for example deletion, it won't be a method on the resource.
+
+```javascript
+/**
+ * Create
+ */
+client.articles().create({
+  subject: 'Some Subject',
+  body: 'Some Body',
+  _links: {
+    topic: {
+      href: '/api/v2/topics/1',
+      'class': 'topic'
+    }
+  }
+}, function(err, article) {
+  article.getSubject().should.equal('Some Subject');
+  article.getBody().should.equal('Some Body');
+});
+
+/**
+ * Update
+ */
+client.articles(function(err, articles) {
+  articles[0].update({
+    subject: 'Some other Subject'
+  }, function(err, article) {
+    // use article
+  });
+});
+
+/**
+ * Delete
+ */
+client.articles(function(err, articles) {
+  articles[0].delete(function(err) {
+    if (err) throw err;
+    continue;
+  });
+});
+
+/**
+ * ATTENTION: Case doesn't allow deletion.
+ */
+client.cases().byId(25, function(err, myCase) {
+  myCase.delete();
+  // => Error: No method delete defined on Object Case.
+});
+```
+
+### Getters & Setters
+For each field on the resource it'll automatically create getters and setters:
+
+```javascript
+client.customers().byId(1, function(err, customer) {
+  console.log(customer.getFirstName());
+  console.log(customer.getLastName());
+  console.log(customer.getTitle());
+  // ...
+  
+  // for updates you can either use the setters
+  customer.setFirstName('John');
+  customer.update(function(err, customer) {})
+  // or a hash
+  customer.update({ first_name: 'John' }, function(err, customer) {})
+});
+```
+
+### API Errors
+Sometimes the API is going to return errors, eg. Validation Error. In these cases we bubble the API error through to the callback so you can deal with it however you please.
+
+```javascript
+client.cases().create({
+  external_id: null,
+  subject: 'Some Subject',
+  priority: 5,
+  description: 'Some Description',
+  status: 'new',
+  type: 'email',
+  labels: ['ignore', 'spam'],
+  language: null,
+  custom_fields: {},
+  message: {
+    direction: 'in',
+    status: 'received',
+    body: 'Some Body',
+    subject: 'Some Subject'
+  },
+  _links: {
+    customer: {
+      href: '/api/v2/customers/34290812',
+      'class': 'customer'
+    }
+  }
+}, function(err, myCase) {
+  console.log(err.message);
+  // => Message requires to, cc or bcc fields to be set to a non-blank value
+});
+```
 
 ## License
 

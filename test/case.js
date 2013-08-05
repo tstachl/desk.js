@@ -58,6 +58,37 @@ describe('Case create', function() {
       done();
     })
   })
+
+  it('returns a validation error if fields are missing', function(done) {
+    var client = createClient();
+    client.cases().create({
+      external_id: null,
+      subject: 'Some Subject',
+      priority: 5,
+      description: 'Some Description',
+      status: 'new',
+      type: 'email',
+      labels: ['ignore', 'spam'],
+      language: null,
+      custom_fields: {},
+      message: {
+        direction: 'in',
+        status: 'received',
+        body: 'Some Body',
+        subject: 'Some Subject'
+      },
+      _links: {
+        customer: {
+          href: '/api/v2/customers/34290812',
+          'class': 'customer'
+        }
+      }
+    }, function(err, kase) {
+      console.log(err);
+      kase.getSubject().should.equal('Some Subject');
+      done();
+    })
+  })
 })
 
 describe('Case update', function() {

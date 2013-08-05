@@ -1,12 +1,21 @@
 {
   "name": "desk",
-  "description": "A wrapper for the desk.com API.",
   "version": "0.1.0",
   "author": "Thomas Stachl <tom@desk.com>",
+  "description": "A wrapper for the desk.com API.",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha -R spec --check-leaks",
+    "coveralls": "NODE_ENV=test YOURPACKAGE_COVERAGE=1 ./node_modules/.bin/mocha -r blanket -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js",
+    "blanket": {
+      "pattern": "lib",
+      "data-cover-never": "node_modules"
+    }
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/tstachl/desk.js.git"
   },
+  "main": "./lib/client",
   "dependencies": {
     "request": "~2.25.0",
     "async": "~0.2.9",
@@ -22,16 +31,8 @@
     "blanket": "~1.1.5",
     "coveralls": "~2.1.0"
   },
-  "main": "./lib/client",
-  "scripts": {
-    "test": "./node_modules/.bin/mocha -R spec --check-leaks",
-    "watch": "./node_modules/.bin/mocha -R spec -u bdd -w -G --check-leaks",
-    "coveralls": "NODE_ENV=test YOURPACKAGE_COVERAGE=1 ./node_modules/.bin/mocha -r blanket -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js",
-    "blanket": {
-      "pattern": [
-        "desk/lib"
-      ]
-    }
-  },
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=0.6"
+  }
 }
