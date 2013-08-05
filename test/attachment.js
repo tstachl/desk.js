@@ -47,7 +47,7 @@ describe('Attachment', function() {
   })
 
   describe('delete', function() {
-    it.skip('deletes an attachment from a case - currently not working', function(done) {
+    it('deletes an attachment from a case - currently not working', function(done) {
       var client = createClient();
       client.cases(function(err, cases) {
         cases[0].attachments(function(err, attachments) {

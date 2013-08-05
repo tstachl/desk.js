@@ -1,0 +1,19 @@
+DELETE /api/v2/cases/3011/attachments/31775165
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+204 HTTP/1.1
+accept-ranges: bytes
+cache-control: no-cache
+date: Mon, 05 Aug 2013 22:35:29 GMT
+status: 204 No Content
+vary: X-AppVersion
+x-appversion: 6.0
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 59
+x-rate-limit-reset: 31
+x-request-id: d3687ed888dcd02ee799f8f842994bc3
+connection: keep-alive
+

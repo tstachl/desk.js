@@ -84,7 +84,6 @@ describe('Case create', function() {
         }
       }
     }, function(err, kase) {
-      console.log(err);
       kase.getSubject().should.equal('Some Subject');
       done();
     })
