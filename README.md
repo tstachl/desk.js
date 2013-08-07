@@ -1,4 +1,4 @@
-# desk.js [![Build Status](https://secure.travis-ci.org/tstachl/desk.js.png)](http://travis-ci.org/tstachl/desk.js) [![Coverage Status](https://coveralls.io/repos/tstachl/desk.js/badge.png)](https://coveralls.io/r/tstachl/desk.js)
+# desk.js [![Build Status](https://secure.travis-ci.org/tstachl/desk.js.png)](http://travis-ci.org/tstachl/desk.js) [![Coverage Status](https://coveralls.io/repos/tstachl/desk.js/badge.png)](https://coveralls.io/r/tstachl/desk.js) [![Dependency Status](https://gemnasium.com/tstachl/desk.js.png)](https://gemnasium.com/tstachl/desk.js)
 
 This is a node.js wrapper for the desk.com API (it might also work in the browser but only with either a proxy or from a desk.com case template). It'll only support APIv2 which is currently in heavy development, changes happen nearly twice to three times a week. We'll try to keep up with all the changes but things might break unexpectedly.
 
