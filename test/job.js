@@ -9,7 +9,7 @@ replay.mode = 'record';
 replay.request_headers = [/^accept/, /^content-type/, /^host/, /^if-/, /^x-/];
 
 try {
-  config = require('../config/test');
+  config = require('../config');
 } catch (err) {
   config = {
     subdomain: 'devel',

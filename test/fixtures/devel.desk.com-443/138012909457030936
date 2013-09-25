@@ -1,0 +1,23 @@
+GET /api/v2/cases?per_page=2
+host: devel.desk.com
+accept: application/json
+content-type: application/json
+
+200 HTTP/1.1
+accept-ranges: bytes
+cache-control: must-revalidate, private, max-age=0
+content-type: application/json; charset=utf-8
+date: Wed, 25 Sep 2013 17:11:34 GMT
+etag: "9bf10fce459091ee428d7560b060c19e"
+status: 200 OK
+vary: X-AppVersion
+x-appversion: 10.7
+x-frame-options: SAMEORIGIN
+x-rate-limit-limit: 60
+x-rate-limit-remaining: 59
+x-rate-limit-reset: 26
+x-request-id: b8af493a2c2ba015dec065c61802f22a
+content-length: 2230
+connection: keep-alive
+
+{"total_entries":334,"_links":{"self":{"href":"/api/v2/cases?page=1&per_page=2","class":"page"},"first":{"href":"/api/v2/cases?page=1&per_page=2","class":"page"},"last":{"href":"/api/v2/cases?page=167&per_page=2","class":"page"},"previous":null,"next":{"href":"/api/v2/cases?page=2&per_page=2","class":"page"}},"_embedded":{"entries":[{"external_id":null,"subject":"","priority":9,"locked_until":null,"description":"","status":"open","type":"phone","labels":[],"language":"en","active_at":"2013-09-07T19:38:58Z","created_at":"2013-05-09T17:02:16Z","updated_at":"2013-09-07T19:39:07Z","received_at":"2013-05-09T17:02:16Z","custom_fields":{"my_new_custom_field":"","my_new_number_field":"0","my_new_date_field":"","my_new_boolean_field":"0","my_new_list_field":"Option 1","follow_up":null},"_links":{"self":{"href":"/api/v2/cases/3011","class":"case"},"message":{"href":"/api/v2/cases/3011/message","class":"phone"},"customer":{"href":"/api/v2/customers/37823480","class":"customer"},"assigned_user":{"href":"/api/v2/users/16096734","class":"user"},"assigned_group":{"href":"/api/v2/groups/171213","class":"group"},"locked_by":null,"replies":{"href":"/api/v2/cases/3011/replies","class":"reply"},"notes":{"href":"/api/v2/cases/3011/notes","class":"note"},"attachments":{"href":"/api/v2/cases/3011/attachments","class":"attachment"}}},{"external_id":null,"subject":"","priority":4,"locked_until":null,"description":null,"status":"pending","type":"email","labels":[],"language":"en","active_at":"2013-05-10T18:55:10Z","created_at":"2013-05-09T18:38:17Z","updated_at":"2013-08-05T18:45:21Z","received_at":null,"custom_fields":{"my_new_custom_field":null,"my_new_number_field":null,"my_new_date_field":null,"my_new_boolean_field":null,"my_new_list_field":null,"follow_up":null},"_links":{"self":{"href":"/api/v2/cases/3012","class":"case"},"message":{"href":"/api/v2/cases/3012/message","class":"email"},"customer":{"href":"/api/v2/customers/37823480","class":"customer"},"assigned_user":null,"assigned_group":null,"locked_by":null,"replies":{"href":"/api/v2/cases/3012/replies","class":"reply"},"notes":{"href":"/api/v2/cases/3012/notes","class":"note"},"attachments":{"href":"/api/v2/cases/3012/attachments","class":"attachment"}}}]}}

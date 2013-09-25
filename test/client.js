@@ -9,12 +9,16 @@ replay.mode = 'record';
 replay.request_headers = [/^accept/, /^content-type/, /^host/, /^if-/, /^x-/];
 
 try {
-  config = require('../config/test');
+  config = require('../config');
 } catch (err) {
   config = {
     subdomain: 'devel',
     username: 'devel@example.com',
-    password: '12345'
+    password: '12345',
+    consumerKey: 'your-consumer-key',
+    consumerSecret: 'your-consumer-secret',
+    token: 'your-token',
+    tokenSecret: 'your-token-secret'
   }
 }
 
@@ -54,9 +58,9 @@ describe('Client', function() {
     });
 
     client.auth.token.should.equal('my_token');
-    client.auth.tokenSecret.should.equal('my_token_secret');
-    client.auth.consumerKey.should.equal('my_consumer_key');
-    client.auth.consumerSecret.should.equal('my_consumer_secret');
+    client.auth.token_secret.should.equal('my_token_secret');
+    client.auth.consumer_key.should.equal('my_consumer_key');
+    client.auth.consumer_secret.should.equal('my_consumer_secret');
 
     done();
   })
@@ -151,6 +155,21 @@ describe('Client', function() {
     client.patch(caseUrl, { subject: 'New Subject' }, function(err, json, response) {
       should.not.exist(err);
       json.subject.should.equal('New Subject');
+      done();
+    });
+  })
+
+  it('sends a oauth get request', function(done) {
+    var client = desk.createClient({
+      subdomain: config.subdomain,
+      consumerKey: config.consumerKey,
+      consumerSecret: config.consumerSecret,
+      token: config.token,
+      tokenSecret: config.tokenSecret
+    });
+
+    client.get('/api/v2/cases?per_page=2', function(err, json, response) {
+      response.should.have.status(200);
       done();
     });
   })
