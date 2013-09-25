@@ -15,7 +15,11 @@ try {
   config = {
     subdomain: 'devel',
     username: 'devel@example.com',
-    password: '12345'
+    password: '12345',
+    consumerKey: 'your-consumer-key',
+    consumerSecret: 'your-consumer-secret',
+    token: 'your-token',
+    tokenSecret: 'your-token-secret'
   }
 }
 
