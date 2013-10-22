@@ -48,6 +48,17 @@ describe('Client', function() {
     done();
   })
 
+  it('accepts a custom Domain rather than a subdomain', function(done) {
+    var client = desk.createClient({
+      customDomain: 'https://support.example.com',
+      username: 'test@example.com',
+      password: '12345'
+    });
+
+    client.customDomain.should.equal('https://support.example.com');
+    done();
+  })
+
   it('accepts token and tokenSecret for OAuth', function(done) {
     var client = desk.createClient({
       subdomain: 'devel',
