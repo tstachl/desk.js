@@ -88,6 +88,23 @@ describe('Resource', function() {
     });
   })
 
+  it('does not keep all the records on the original resource', function(done) {
+    var client = createClient();
+    client.cases(function(err, cases) {
+      should.not.exist(err);
+      cases.length.should.equal(50);
+      cases.next(function(err, cases) {
+        should.not.exist(err);
+        cases.length.should.equal(50);
+        client.cases(function(err, cases) {
+          should.not.exist(err);
+          cases.length.should.equal(50);
+          done();
+        });
+      });
+    });
+  })
+
   it('can not go beyond the last page', function(done) {
     var client = createClient();
     client.users().perPage(1).page(1).exec(function(err, users) {
