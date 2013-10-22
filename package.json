@@ -7,7 +7,8 @@
     "test": "./node_modules/.bin/mocha -R spec --check-leaks",
     "coveralls": "NODE_ENV=test YOURPACKAGE_COVERAGE=1 ./node_modules/.bin/mocha -r blanket -R mocha-lcov-reporter | ./node_modules/coveralls/bin/coveralls.js",
     "blanket": {
-      "pattern": "lib"
+      "pattern": "lib",
+      "data-cover-never": "node_modules"
     }
   },
   "repository": {
