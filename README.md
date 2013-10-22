@@ -93,6 +93,26 @@ client.users().perPage(10).page(5).exec(function(err, users) {
 });
 ```
 
+We also support indicators now, so on any page you are you can check if that page has a next/previous page.
+
+```javascript
+// fetch the first page of the cases collection
+client.cases(function(err, cases) {
+  // if we have more than 30 (default page size) cases
+  // a check for a next page will be true
+  cases.hasNextPage() === true;
+  // however the first page will never have a previous page
+  cases.hasPreviousPage() === false;
+  // this turns on the last page
+  cases.last(function(err, cases) {
+    // we won't have a next page
+    cases.hasNextPage() === false;
+    // but we'll have a previous page
+    cases.hasPreviousPage() === true;
+  });
+});
+```
+
 Pagination is pretty obvious but the cool part about pagination or rather resources is the auto-linking. As soon as the resource has a link defined, it'll be navigatable:
 
 ```json
