@@ -16,7 +16,7 @@
     "request": "~2.27.0",
     "async": "~0.2.9",
     "qs": "~0.6.5",
-    "lodash": "~2.1.0",
+    "lodash": "~2.2.1",
     "inflection": "~1.2.6"
   },
   "devDependencies": {
