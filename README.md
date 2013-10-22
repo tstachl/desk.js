@@ -12,7 +12,7 @@ var desk = require('desk')
   , client = desk.createClient({
   subdomain: 'devel',
   // optional include only if you use a custom domain - see below for details
-  customDomain: 'https://yourcustomdomain.com',
+  endpoint: 'https://support.example.com',
   // use it with basic auth
   username: 'devel@example.com',
   password: '12345',
@@ -206,13 +206,13 @@ client.customers().byId(1, function(err, customer) {
 ```
 
 ### Custom Domains
-If your desk.com site [uses a custom domain](https://support.desk.com/customer/portal/articles/1548-how-to-use-your-own-domain-for-the-portal), you should use that URL as the basis for your api calls.  If you set the customDomain property when creating your desk.com client, it will use this domain instead of the subdomain value to construct the URL.  The URL should be a fully qualified path to your site (e.g. https://yoursupportsite.com)
+If your desk.com site [uses a custom domain](https://support.desk.com/customer/portal/articles/1548-how-to-use-your-own-domain-for-the-portal), you should use that URL as the basis for your api calls.  If you set the endpoint property when creating your desk.com client, it will use this domain instead of the subdomain value to construct the URL.  The URL should be a fully qualified path to your site (e.g. https://yoursupportsite.com)
 
 ```javascript
 var desk = require('desk')
   , client = desk.createClient({
   // Specify to use a custom domain
-  customDomain: 'https://yourcustomdomain.com',
+  endpoint: 'https://support.example.com',
   // use it with basic auth
   username: 'devel@example.com',
   password: '12345',

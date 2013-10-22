@@ -50,12 +50,12 @@ describe('Client', function() {
 
   it('accepts a custom Domain rather than a subdomain', function(done) {
     var client = desk.createClient({
-      customDomain: 'https://support.example.com',
+      endpoint: 'https://support.example.com',
       username: 'test@example.com',
       password: '12345'
     });
 
-    client.customDomain.should.equal('https://support.example.com');
+    client.endpoint.should.equal('https://support.example.com');
     done();
   })
 
