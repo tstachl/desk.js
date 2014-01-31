@@ -8,7 +8,7 @@ Now for the fun part ...
 This is a basic example of how to create a client and establish a connection. It shows the four request methods supported by the desk.com API (`GET`, `POST`, `PATCH` and `DELETE`).
 
 ```javascript
-var desk = require('desk')
+var desk = require('desk.js')
   , client = desk.createClient({
   subdomain: 'devel',
   // optional include only if you use a custom domain - see below for details
