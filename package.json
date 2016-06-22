@@ -29,7 +29,7 @@
     "mocha-lcov-reporter": "0.0.1",
     "should": "~1.2.2",
     "blanket": "~1.1.5",
-    "coveralls": "~2.1.0"
+    "coveralls": "~2.11.9"
   },
   "license": "MIT",
   "engines": {
