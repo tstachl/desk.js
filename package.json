@@ -17,11 +17,11 @@
   },
   "main": "./lib/client",
   "dependencies": {
-    "request": "~2.27.0",
-    "async": "~0.2.9",
-    "qs": "~0.6.5",
-    "lodash": "~2.2.1",
-    "inflection": "~1.2.6"
+    "request": "~2.72.0",
+    "async": "~1.5.2",
+    "qs": "~6.2.0",
+    "lodash": "~4.13.1",
+    "inflection": "~1.10.0"
   },
   "devDependencies": {
     "replay": "git://github.com/tstachl/node-replay.git",
