@@ -1,6 +1,6 @@
 {
   "name": "desk.js",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "author": "Thomas Stachl <tstachl@salesforce.com>",
   "description": "A wrapper for the desk.com API.",
   "scripts": {
