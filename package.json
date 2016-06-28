@@ -1,7 +1,7 @@
 {
   "name": "desk.js",
   "version": "0.1.2",
-  "author": "Thomas Stachl <tom@desk.com>",
+  "author": "Thomas Stachl <tstachl@salesforce.com>",
   "description": "A wrapper for the desk.com API.",
   "scripts": {
     "test": "./node_modules/.bin/mocha -R spec --check-leaks",
