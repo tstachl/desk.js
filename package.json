@@ -17,23 +17,23 @@
   },
   "main": "./lib/client",
   "dependencies": {
-    "request": "~2.72.0",
-    "async": "~1.5.2",
-    "qs": "~6.2.0",
-    "lodash": "~4.13.1",
-    "inflection": "~1.10.0"
+    "request": "~2.83.0",
+    "async": "~2.6.0",
+    "qs": "~6.5.1",
+    "lodash": "~4.17.4",
+    "inflection": "~1.12.0"
   },
   "devDependencies": {
     "replay": "git://github.com/tstachl/node-replay.git",
-    "mocha": "~1.12.0",
-    "mocha-lcov-reporter": "0.0.1",
+    "mocha": "~5.0.0",
+    "mocha-lcov-reporter": "~1.3.0",
     "should": "~1.2.2",
-    "blanket": "~1.1.5",
-    "coveralls": "~2.11.9"
+    "blanket": "~1.2.3",
+    "coveralls": "~3.0.0"
   },
   "license": "MIT",
   "engines": {
-    "node": ">=0.6"
+    "node": ">=4"
   },
   "bugs": {
     "url": "https://github.com/tstachl/desk.js/issues"
