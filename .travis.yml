@@ -20,7 +20,4 @@ node_js:
   - "6"
   - "5"
   - "4"
-  - "3"
-  - "2"
-  - "1"
 after_script: "npm run-script coveralls"
